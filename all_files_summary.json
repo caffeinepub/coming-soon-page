@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister placeholder with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report mapping two frontend features (Coming Soon page and dark/amber visual theme) to their implementing files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document containing one-line descriptions of the three main frontend source files: App.tsx, index.css, and tailwind.config.js.",
+  "frontend/index.css": "Base Tailwind CSS file defining light and dark OKLCH CSS custom property tokens for the shadcn-ui design system, including colors, sidebar, and chart variables.",
+  "frontend/index.html": "Minimal HTML entry point titled 'Coming Soon Page' that mounts the React app via a root div and loads main.tsx as a module.",
+  "frontend/src/App.tsx": "Main React component rendering a dark-themed 'Coming Soon' landing page with animated hammer icon, fade-in heading with animated dots, ambient glow orbs, feature hint cards, and a branded footer.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, invalidating dependent queries whenever the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Custom React hook and context provider that manages Internet Identity authentication state, exposing login/logout functions and status flags via an AuthClient wrapper.",
+  "frontend/src/index.css": "Global stylesheet importing Syne and Inter fonts, defining dark OKLCH design tokens with amber/gold and teal accents, custom utility classes, and keyframe animations for hammer-swing, ping, fade-up, and shimmer effects.",
+  "frontend/src/main.tsx": "React app entry point that wraps the App component with QueryClientProvider and InternetIdentityProvider before mounting to the DOM.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with Syne/Inter/mono font families, OKLCH-based color tokens, amber glow box-shadow, additional border-radius steps, and custom keyframe animations mapped to utility classes.",
+  "project_state.json": "Tracks project state for a 'Coming Soon' landing page with two features: building the page and applying a bold dark/amber modern theme. No new feature requests or known issues."
+}

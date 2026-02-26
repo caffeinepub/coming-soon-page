@@ -1,0 +1,56 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Coming Soon / Under Construction Landing Page",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a visually engaging 'Coming Soon' / 'Under Construction' landing page with a clear heading, friendly message, centered responsive layout, and generated background image",
+      "acceptanceCriteria": [
+        "Page displays a clear 'Coming Soon' or 'Under Construction' heading in English",
+        "Page includes a short friendly message letting visitors know the site is being prepared",
+        "Page is centered and responsive on both desktop and mobile screens",
+        "Generated background or hero image is displayed as a static asset"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace the existing app content with a centered coming soon page layout. Include a prominent 'Coming Soon' or 'Under Construction' heading, a friendly message informing visitors the site is being prepared, and wire in the generated background image from frontend/public/assets/generated/coming-soon-bg.dim_1920x1080.png as a static asset. Ensure the layout is centered and responsive for both desktop and mobile screens."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to support a centered, full-viewport coming soon layout. Add utility classes or base styles for vertical and horizontal centering, full-height containers, and responsive text scaling. Ensure the design works seamlessly on mobile and desktop."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a bold, modern visual theme with dark background, vibrant accent colors (amber/gold or teal), elegant typography, and subtle animated elements to create a polished first impression",
+      "acceptanceCriteria": [
+        "A consistent color palette using dark background with a vibrant accent is applied throughout",
+        "Typography is modern and readable with clear visual hierarchy",
+        "At least one subtle animation (fade-in, pulse, or shimmer) is present",
+        "The design looks polished on both mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme to include a dark background color palette and vibrant accent colors (amber/gold or teal). Add custom animation keyframes for subtle effects such as fade-in, pulse, or shimmer. Configure font families for modern, elegant typography with clear visual hierarchy."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for the dark background and accent colors (amber/gold or teal). Add keyframe animations for subtle effects (fade-in, pulse, shimmer). Apply base typography styles that enforce a modern, readable font stack and clear visual hierarchy across headings and body text."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the dark background, vibrant accent colors, elegant typography, and at least one subtle animation (fade-in on load, pulsing icon, or shimmer effect) to the coming soon page. Use Tailwind utility classes and custom CSS to enforce the modern, polished theme consistently. Ensure the design is responsive and looks polished on both mobile and desktop."
+        }
+      ]
+    }
+  ]
+}

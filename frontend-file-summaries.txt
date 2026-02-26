@@ -1,0 +1,5 @@
+{
+  "frontend/src/App.tsx": "A polished \"Coming Soon\" landing page with a dark theme, amber/gold accents, animated hammer icon, fade-in content sections, animated status badge, feature hint cards, and a branded footer with caffeine.ai attribution.",
+  "frontend/src/index.css": "Global styles defining a dark OKLCH color system with amber/gold primary tokens, Syne display font and Inter body font imports, custom utility classes for amber colors and glows, and keyframe animations for the hammer swing, ping, and fade-up effects.",
+  "frontend/tailwind.config.js": "Extended Tailwind config adding Syne/Inter/mono font families, amber glow box-shadow token, additional border-radius steps, and custom keyframe animations (hammer-swing, ping-slow, fade-up, shimmer) mapped to animation utilities."
+}

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Dark page background */
+    --background: 0.12 0.005 260;
+    --foreground: 0.95 0.01 90;
+
+    --card: 0.16 0.008 260;
+    --card-foreground: 0.95 0.01 90;
+
+    --popover: 0.18 0.008 260;
+    --popover-foreground: 0.95 0.01 90;
+
+    /* Amber/gold primary */
+    --primary: 0.78 0.16 75;
+    --primary-foreground: 0.12 0.005 260;
+
+    --secondary: 0.22 0.01 260;
+    --secondary-foreground: 0.85 0.01 90;
+
+    --muted: 0.20 0.008 260;
+    --muted-foreground: 0.55 0.01 90;
+
+    --accent: 0.78 0.16 75;
+    --accent-foreground: 0.12 0.005 260;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.95 0 0 / 8%;
+    --input: 0.95 0 0 / 10%;
+    --ring: 0.78 0.16 75;
+
+    --chart-1: 0.78 0.16 75;
+    --chart-2: 0.65 0.14 180;
+    --chart-3: 0.55 0.12 260;
+    --chart-4: 0.70 0.18 50;
+    --chart-5: 0.60 0.20 30;
+
+    --sidebar: 0.14 0.006 260;
+    --sidebar-foreground: 0.95 0.01 90;
+    --sidebar-primary: 0.78 0.16 75;
+    --sidebar-primary-foreground: 0.12 0.005 260;
+    --sidebar-accent: 0.20 0.008 260;
+    --sidebar-accent-foreground: 0.85 0.01 90;
+    --sidebar-border: 0.95 0 0 / 8%;
+    --sidebar-ring: 0.78 0.16 75;
+
+    /* Custom tokens */
+    --amber: 0.78 0.16 75;
+    --teal: 0.65 0.14 180;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .bg-page {
+    background-color: oklch(0.10 0.005 260);
+  }
+
+  .bg-overlay {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.10 0.005 260 / 0.55) 0%,
+      oklch(0.08 0.005 260 / 0.75) 50%,
+      oklch(0.08 0.005 260 / 0.92) 100%
+    );
+  }
+
+  .bg-glow-amber {
+    background-color: oklch(0.78 0.16 75);
+  }
+
+  .bg-glow-teal {
+    background-color: oklch(0.65 0.14 180);
+  }
+
+  .text-amber {
+    color: oklch(0.82 0.16 75);
+  }
+
+  .bg-amber {
+    background-color: oklch(0.82 0.16 75);
+  }
+
+  .border-amber {
+    border-color: oklch(0.82 0.16 75);
+  }
+
+  .bg-amber\/5 {
+    background-color: oklch(0.82 0.16 75 / 0.05);
+  }
+
+  .bg-amber\/10 {
+    background-color: oklch(0.82 0.16 75 / 0.10);
+  }
+
+  .border-amber\/20 {
+    border-color: oklch(0.82 0.16 75 / 0.20);
+  }
+
+  .text-amber\/50 {
+    color: oklch(0.82 0.16 75 / 0.50);
+  }
+
+  .text-amber\/60 {
+    color: oklch(0.82 0.16 75 / 0.60);
+  }
+
+  .text-amber\/80 {
+    color: oklch(0.82 0.16 75 / 0.80);
+  }
+
+  .bg-amber\/40 {
+    background-color: oklch(0.82 0.16 75 / 0.40);
+  }
+
+  .shadow-amber-glow {
+    box-shadow: 0 0 30px oklch(0.82 0.16 75 / 0.25), 0 0 60px oklch(0.82 0.16 75 / 0.10);
+  }
+
+  .bg-white\/3 {
+    background-color: rgb(255 255 255 / 0.03);
+  }
+
+  .font-display {
+    font-family: 'Syne', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  @keyframes hammer-swing {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+  }
+
+  @keyframes ping-slow {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+}
+
+.animate-hammer {
+  animation: hammer-swing 1.4s ease-in-out infinite;
+  transform-origin: bottom right;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out forwards;
+}

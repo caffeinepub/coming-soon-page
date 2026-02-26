@@ -1,0 +1,55 @@
+{
+  "kind": "build_request",
+  "title": "Coming Soon / Under Construction Landing Page",
+  "projectName": "Coming Soon Page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a visually engaging 'Coming Soon' / 'Under Construction' landing page that informs visitors the website is being built and will be available soon.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "جب تک وہاں ویب سائٹ بن رہی ہے"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page displays a clear 'Coming Soon' or 'Under Construction' heading in English",
+        "Page includes a short friendly message letting visitors know the site is being prepared",
+        "Page is centered and responsive on both desktop and mobile screens",
+        "Generated background or hero image is displayed as a static asset"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Apply a bold, modern visual theme with a dark background, vibrant accent colors (e.g., amber/gold or teal), elegant typography, and subtle animated elements (e.g., a pulsing icon or fade-in text) to create a polished first impression. Enforce this theme consistently across all page elements.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent color palette using dark background with a vibrant accent is applied throughout",
+        "Typography is modern and readable with clear visual hierarchy",
+        "At least one subtle animation (fade-in, pulse, or shimmer) is present",
+        "The design looks polished on both mobile and desktop"
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [
+    "No backend logic or data persistence is needed",
+    "No countdown timer or email subscription form unless explicitly requested",
+    "No multi-page navigation"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Dark abstract background with soft geometric shapes and a glowing amber/gold gradient focal point, suitable for a coming soon page (coming-soon-bg.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}
